@@ -1,0 +1,523 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.33.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Issifu Alhassan, Ashesi University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.33.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.15
+Assembler:       Armasm.exe V6.15
+Linker/Locator:  ArmLink.exe V6.15
+Library Manager: ArmAr.exe V6.15
+Hex Converter:   FromElf.exe V6.15
+CPU DLL:         SARMCM3.DLL V5.33.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.4.0
+Target DLL:      CMSIS_AGDI.dll V1.32.12.0
+Dialog DLL:      TARMCM1.DLL V1.14.3.0
+ 
+<h2>Project:</h2>
+C:\Users\User\Desktop\Embedded systems\files\Keil projects\Final Project\Issifu_final_project.uvprojx
+Project File Date:  12/18/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.15', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(7): warning: In file included from...
+./bluetooth.h(9): warning: extra ';' outside of a function [-Wextra-semi]
+int get_forward(void);;
+                      ^
+./bluetooth.h(17): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+int get_automatic();
+                 ^
+                  void
+./bluetooth.h(21): warning: extra ';' outside of a function [-Wextra-semi]
+void set_left(void);;
+                    ^
+./bluetooth.h(24): warning: extra ';' outside of a function [-Wextra-semi]
+void set_fast(void);;
+                    ^
+main.c(10): warning: In file included from...
+./seven.h(3): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void initialize_seven_segment();
+                             ^
+                              void
+./seven.h(6): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(11): warning: In file included from...
+./move.h(11): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(20): warning: no previous extern declaration for non-static variable 'distance' [-Wmissing-variable-declarations]
+int distance = 0;
+    ^
+main.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int distance = 0;
+^
+main.c(21): warning: no previous extern declaration for non-static variable 'stop_counts' [-Wmissing-variable-declarations]
+int stop_counts = 0;
+    ^
+main.c(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int stop_counts = 0;
+^
+main.c(22): warning: no previous extern declaration for non-static variable 'bluetooth_instruction' [-Wmissing-variable-declarations]
+int bluetooth_instruction = 0;
+    ^
+main.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int bluetooth_instruction = 0;
+^
+main.c(23): warning: no previous extern declaration for non-static variable 'previous_instruction' [-Wmissing-variable-declarations]
+int previous_instruction = 0;
+    ^
+main.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int previous_instruction = 0;
+^
+main.c(61): warning: implicit declaration of function 'Init_UART' is invalid in C99 [-Wimplicit-function-declaration]
+        Init_UART();
+        ^
+main.c(63): warning: implicit declaration of function 'Send_String' is invalid in C99 [-Wimplicit-function-declaration]
+        Send_String(buff);
+        ^
+main.c(122): warning: initializing 'uint8_t *' (aka 'unsigned char *') with an expression of type 'char [1]' converts between pointers to integer types with different sign [-Wpointer-sign]
+uint8_t *buff = "";
+         ^      ~~
+main.c(122): warning: no previous extern declaration for non-static variable 'buff' [-Wmissing-variable-declarations]
+main.c(122): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t *buff = "";
+^
+main.c(102): warning: unused function 'select_direction' [-Wunused-function]
+static void select_direction()
+            ^
+16 warnings generated.
+compiling servo.c...
+servo.c(29): warning: no previous prototype for function 'TPM0_IRQHandler' [-Wmissing-prototypes]
+void TPM0_IRQHandler()
+     ^
+servo.c(29): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TPM0_IRQHandler()
+^
+static 
+servo.c(29): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TPM0_IRQHandler()
+                    ^
+2 warnings generated.
+compiling ultrasonic.c...
+ultrasonic.c(1): warning: non-portable path to file '"MKL25Z4.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mkl25z4.h"
+         ^~~~~~~~~~~
+         "MKL25Z4.h"
+ultrasonic.c(8): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
+volatile int counter = 1;
+             ^
+ultrasonic.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int counter = 1;
+         ^
+ultrasonic.c(9): warning: no previous extern declaration for non-static variable 'interval' [-Wmissing-variable-declarations]
+unsigned int interval=7;
+             ^
+ultrasonic.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int interval=7;
+^
+ultrasonic.c(47): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                current |= (ctr <<16); // add the no. of overflows.
+                        ~~  ~~~~^~~~
+ultrasonic.c(39): warning: no previous prototype for function 'TPM2_IRQHandler' [-Wmissing-prototypes]
+void TPM2_IRQHandler()
+     ^
+ultrasonic.c(39): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TPM2_IRQHandler()
+^
+static 
+ultrasonic.c(39): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TPM2_IRQHandler()
+                    ^
+ultrasonic.c(90): warning: no previous prototype for function 'PIT_IRQHandler' [-Wmissing-prototypes]
+void PIT_IRQHandler(){
+     ^
+ultrasonic.c(90): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void PIT_IRQHandler(){
+^
+static 
+ultrasonic.c(90): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void PIT_IRQHandler(){
+                   ^
+8 warnings generated.
+compiling lcd.c...
+lcd.c(1): warning: non-portable path to file '"MKL25Z4.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mkl25z4.h"
+         ^~~~~~~~~~~
+         "MKL25Z4.h"
+1 warning generated.
+compiling bluetooth.c...
+bluetooth.c(1): warning: non-portable path to file '<MKL25Z4.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <mkl25z4.h>
+         ^~~~~~~~~~~
+         <MKL25Z4.h>
+bluetooth.c(3): warning: In file included from...
+./queues.h(5): warning: non-portable path to file '<MKL25Z4.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <MKL25Z4.H>
+         ^~~~~~~~~~~
+         <MKL25Z4.h>
+bluetooth.c(4): warning: In file included from...
+./bluetooth.h(9): warning: extra ';' outside of a function [-Wextra-semi]
+int get_forward(void);;
+                      ^
+./bluetooth.h(17): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+int get_automatic();
+                 ^
+                  void
+./bluetooth.h(21): warning: extra ';' outside of a function [-Wextra-semi]
+void set_left(void);;
+                    ^
+./bluetooth.h(24): warning: extra ';' outside of a function [-Wextra-semi]
+void set_fast(void);;
+                    ^
+bluetooth.c(13): warning: no previous extern declaration for non-static variable 'forward' [-Wmissing-variable-declarations]
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+             ^
+bluetooth.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+         ^
+bluetooth.c(13): warning: no previous extern declaration for non-static variable 'reverse' [-Wmissing-variable-declarations]
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+                          ^
+bluetooth.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+         ^
+bluetooth.c(13): warning: no previous extern declaration for non-static variable 'left' [-Wmissing-variable-declarations]
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+                                       ^
+bluetooth.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+         ^
+bluetooth.c(13): warning: no previous extern declaration for non-static variable 'right' [-Wmissing-variable-declarations]
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+                                                 ^
+bluetooth.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+         ^
+bluetooth.c(13): warning: no previous extern declaration for non-static variable 'stop' [-Wmissing-variable-declarations]
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+                                                            ^
+bluetooth.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+         ^
+bluetooth.c(13): warning: no previous extern declaration for non-static variable 'fast' [-Wmissing-variable-declarations]
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+                                                                      ^
+bluetooth.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+         ^
+bluetooth.c(13): warning: no previous extern declaration for non-static variable 'slow' [-Wmissing-variable-declarations]
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+                                                                               ^
+bluetooth.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+         ^
+bluetooth.c(13): warning: no previous extern declaration for non-static variable 'accelerate' [-Wmissing-variable-declarations]
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+                                                                                         ^
+bluetooth.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+         ^
+bluetooth.c(13): warning: no previous extern declaration for non-static variable 'automatic' [-Wmissing-variable-declarations]
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+                                                                                                        ^
+bluetooth.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile int forward = 0, reverse = 0, left = 0, right = 0, stop = 1, fast = 0,slow = 0, accelerate = 0,automatic = 0;
+         ^
+bluetooth.c(30): warning: no previous prototype for function 'Init_UART' [-Wmissing-prototypes]
+void Init_UART(void){
+     ^
+bluetooth.c(30): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Init_UART(void){
+^
+static 
+bluetooth.c(49): warning: no previous prototype for function 'Init_UART_fuller' [-Wmissing-prototypes]
+void Init_UART_fuller(void){
+     ^
+bluetooth.c(49): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Init_UART_fuller(void){
+^
+static 
+bluetooth.c(80): warning: no previous prototype for function 'UART0_IRQHandler' [-Wmissing-prototypes]
+void UART0_IRQHandler(void) {
+     ^
+bluetooth.c(80): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void UART0_IRQHandler(void) {
+^
+static 
+bluetooth.c(115): warning: no previous prototype for function 'Send_String' [-Wmissing-prototypes]
+void Send_String(uint8_t * str) {
+     ^
+bluetooth.c(115): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Send_String(uint8_t * str) {
+^
+static 
+bluetooth.c(140): warning: passing 'uint8_t [80]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        if(strcmp(buffer,"Command 0")==0) 
+                  ^~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(125): note: passing argument to parameter here
+extern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+                                             ^
+bluetooth.c(153): warning: passing 'uint8_t [80]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        else if(strcmp(buffer,"Command 1")==0)
+                       ^~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(125): note: passing argument to parameter here
+extern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+                                             ^
+bluetooth.c(163): warning: passing 'uint8_t [80]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        else if(strcmp(buffer,"Command 2")==0)
+                       ^~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(125): note: passing argument to parameter here
+extern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+                                             ^
+bluetooth.c(173): warning: passing 'uint8_t [80]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        else if(strcmp(buffer,"Command 3")==0)
+                       ^~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(125): note: passing argument to parameter here
+extern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+                                             ^
+bluetooth.c(186): warning: passing 'uint8_t [80]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        else if(strcmp(buffer,"Command 4")==0)
+                       ^~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(125): note: passing argument to parameter here
+extern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+                                             ^
+bluetooth.c(199): warning: passing 'uint8_t [80]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        else if(strcmp(buffer,"Command 5")==0)
+                       ^~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(125): note: passing argument to parameter here
+extern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+                                             ^
+bluetooth.c(213): warning: passing 'uint8_t [80]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        else if(strcmp(buffer,"Command 6")==0)
+                       ^~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(125): note: passing argument to parameter here
+extern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+                                             ^
+bluetooth.c(228): warning: passing 'uint8_t [80]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        else if(strcmp(buffer,"Command 7")==0)
+                       ^~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(125): note: passing argument to parameter here
+extern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+                                             ^
+bluetooth.c(242): warning: passing 'uint8_t [80]' to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        else if(strcmp(buffer,"Command 8")==0)
+                       ^~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(125): note: passing argument to parameter here
+extern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+                                             ^
+bluetooth.c(311): warning: no previous prototype for function 'get_automatic' [-Wmissing-prototypes]
+int get_automatic()
+    ^
+./bluetooth.h(17): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+int get_automatic();
+    ^
+                  void
+bluetooth.c(311): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+int get_automatic()
+                 ^
+bluetooth.c(17): warning: no previous extern declaration for non-static variable 'rxChar' [-Wmissing-variable-declarations]
+volatile char rxChar;
+              ^
+bluetooth.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile char rxChar;
+         ^
+bluetooth.c(19): warning: no previous extern declaration for non-static variable 'TxQ' [-Wmissing-variable-declarations]
+Q_T TxQ, RxQ;
+    ^
+bluetooth.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+Q_T TxQ, RxQ;
+^
+bluetooth.c(19): warning: no previous extern declaration for non-static variable 'RxQ' [-Wmissing-variable-declarations]
+Q_T TxQ, RxQ;
+         ^
+bluetooth.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+Q_T TxQ, RxQ;
+^
+33 warnings generated.
+compiling queues.c...
+queues.c(1): warning: In file included from...
+./queues.h(5): warning: non-portable path to file '<MKL25Z4.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <MKL25Z4.H>
+         ^~~~~~~~~~~
+         <MKL25Z4.h>
+queues.c(24): warning: implicit conversion changes signedness: 'volatile unsigned int' to 'int' [-Wsign-conversion]
+        return q->Size;
+        ~~~~~~ ~~~^~~~
+2 warnings generated.
+compiling led.c...
+led.c(1): warning: non-portable path to file '"MKL25Z4.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mkl25z4.h"
+         ^~~~~~~~~~~
+         "MKL25Z4.h"
+led.c(4): warning: In file included from...
+./bluetooth.h(9): warning: extra ';' outside of a function [-Wextra-semi]
+int get_forward(void);;
+                      ^
+./bluetooth.h(17): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+int get_automatic();
+                 ^
+                  void
+./bluetooth.h(21): warning: extra ';' outside of a function [-Wextra-semi]
+void set_left(void);;
+                    ^
+./bluetooth.h(24): warning: extra ';' outside of a function [-Wextra-semi]
+void set_fast(void);;
+                    ^
+led.c(238): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                        default:
+                        ^
+led.c(238): warning: unannotated fall-through between switch labels [-Wimplicit-fallthrough]
+led.c(238): note: insert '__attribute__((fallthrough));' to silence this warning
+                        default:
+                        ^
+                        __attribute__((fallthrough)); 
+led.c(238): note: insert 'break;' to avoid fall-through
+                        default:
+                        ^
+                        break; 
+7 warnings generated.
+compiling millis.c...
+millis.c(20): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+millis.c(18): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(){
+     ^
+millis.c(18): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(){
+^
+static 
+millis.c(18): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void SysTick_Handler(){
+                    ^
+3 warnings generated.
+compiling ldr.c...
+ldr.c(2): warning: non-portable path to file '<MKL25Z4.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <mkl25z4.h>
+         ^~~~~~~~~~~
+         <MKL25Z4.h>
+1 warning generated.
+compiling seven.c...
+seven.c(1): warning: non-portable path to file '"MKL25Z4.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mkl25z4.h"
+         ^~~~~~~~~~~
+         "MKL25Z4.h"
+seven.c(2): warning: In file included from...
+./seven.h(3): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void initialize_seven_segment();
+                             ^
+                              void
+./seven.h(6): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+seven.c(25): warning: no previous prototype for function 'initialize_seven_segment' [-Wmissing-prototypes]
+void initialize_seven_segment(){
+     ^
+./seven.h(3): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void initialize_seven_segment();
+     ^
+                              void
+seven.c(25): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void initialize_seven_segment(){
+                             ^
+seven.c(130): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                default:
+                ^
+6 warnings generated.
+compiling move.c...
+move.c(1): warning: non-portable path to file '<MKL25Z4.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <mkl25z4.h>
+         ^~~~~~~~~~~
+         <MKL25Z4.h>
+move.c(2): warning: In file included from...
+./move.h(11): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+move.c(36): warning: no previous prototype for function 'TPM1_IRQHandler' [-Wmissing-prototypes]
+void TPM1_IRQHandler()
+     ^
+move.c(36): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TPM1_IRQHandler()
+^
+static 
+move.c(36): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TPM1_IRQHandler()
+                    ^
+move.c(127): warning: no newline at end of file [-Wnewline-eof]
+ 
+ ^
+5 warnings generated.
+compiling blinkrate.c...
+blinkrate.c(23): warning: implicit conversion turns floating-point number into integer: 'float' to 'int' [-Wfloat-conversion]
+        int num = (int) 330/val;
+            ~~~   ~~~~~~~~~^~~~
+blinkrate.c(19): warning: unused variable 'ctr' [-Wunused-variable]
+        int ctr=0;
+            ^
+blinkrate.c(17): warning: no previous prototype for function 'do_blink_rate' [-Wmissing-prototypes]
+void do_blink_rate (void) {
+     ^
+blinkrate.c(17): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void do_blink_rate (void) {
+^
+static 
+blinkrate.c(25): warning: comparison of integers of different signs: 'unsigned long' and 'int' [-Wsign-compare]
+        if(cur_time - l_run > num)
+           ~~~~~~~~~~~~~~~~ ^ ~~~
+blinkrate.c(74): warning: implicit conversion from 'unsigned int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+        val = (float)3.3*sample/0xffff;         //recall 0xffff maps to max of 3.3v
+                        ~^~~~~~
+blinkrate.c(15): warning: no previous extern declaration for non-static variable 'bufff' [-Wmissing-variable-declarations]
+char bufff[20];
+     ^
+blinkrate.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char bufff[20];
+^
+6 warnings generated.
+assembling startup_MKL25Z4.s...
+compiling system_MKL25Z4.c...
+linking...
+Program Size: Code=5244 RO-data=256 RW-data=8 ZI-data=920  
+".\Objects\Issifu_final_project.axf" - 0 Error(s), 90 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.0.pack
+                Keil.Kinetis_KLxx_DFP.1.15.0
+                NXP Kinetis KLxx Series Device Support and Examples
+   * Component: Startup Version: 2.5.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\MKL25Z128xxx4
+  .\RTE\_Target_1
+  C:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\User\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.5.0
+      Source file:   Device\Source\ARM\startup_MKL25Z4.s
+      Source file:   Device\Source\system_MKL25Z4.c
+      Include file:  Device\Source\system_MKL25Z4.h
+Build Time Elapsed:  00:00:06
+</pre>
+</body>
+</html>
